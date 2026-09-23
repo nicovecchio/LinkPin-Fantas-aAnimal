@@ -57,10 +57,6 @@ export default function Page() {
             <LinkButton key={link.title} link={link} />
           ))}
         </div>
-
-        <footer className="pt-2 text-center text-xs font-bold text-black/70">
-          © {new Date().getFullYear()} {name}
-        </footer>
       </section>
     </main>
   )
