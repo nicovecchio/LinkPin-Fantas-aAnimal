@@ -1,33 +1,40 @@
-import { ArrowUpRight } from "lucide-react"
 import type { MainLink } from "@/lib/profile-data"
+import { ExternalLink } from "lucide-react"
 
-export function LinkButton({ link }: { link: MainLink }) {
+type LinkButtonProps = {
+  link: MainLink
+}
+
+export function LinkButton({ link }: LinkButtonProps) {
   const Icon = link.icon
 
   return (
-    <a
-      href={link.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative flex w-full items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-5 py-4 backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:border-white/20 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-400/70"
-    >
-      {Icon ? (
-        <span className="flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-violet-200 transition-colors duration-300 group-hover:text-white">
-          <Icon className="size-5" aria-hidden="true" />
-        </span>
-      ) : null}
-
-      <span className="flex min-w-0 flex-1 flex-col text-left">
-        <span className="truncate font-semibold text-white">{link.title}</span>
-        {link.subtitle ? (
-          <span className="truncate text-sm text-white/50">{link.subtitle}</span>
-        ) : null}
-      </span>
-
-      <ArrowUpRight
-        className="size-5 shrink-0 text-white/30 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
+    <div className="group relative w-full">
+      {/* Sombreado degradado idéntico al logo que se enciende en hover y al hacer clic */}
+      <div
         aria-hidden="true"
+        className="absolute -inset-0.5 rounded-2xl bg-gradient-to-tr from-orange-400 via-amber-300 to-emerald-400 opacity-30 blur-xs transition-all duration-300 group-hover:opacity-100 group-hover:blur-md group-active:opacity-100 group-active:scale-[0.99]"
       />
-    </a>
+
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative flex w-full items-center justify-between gap-4 rounded-2xl border border-orange-100 bg-white/95 px-5 py-4 text-black shadow-md transition-all duration-200 active:scale-[0.98]"
+      >
+        <div className="flex items-center gap-3.5">
+          {Icon && (
+            <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-black">
+              <Icon className="size-5 text-black" />
+            </div>
+          )}
+          <div className="flex flex-col text-left">
+            <span className="text-base font-bold text-black">{link.title}</span>
+            {link.subtitle && <span className="text-xs font-semibold text-black/80">{link.subtitle}</span>}
+          </div>
+        </div>
+        <ExternalLink className="size-4 shrink-0 text-black transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+      </a>
+    </div>
   )
 }
