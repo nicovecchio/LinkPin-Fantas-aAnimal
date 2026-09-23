@@ -57,6 +57,19 @@ export default function Page() {
             <LinkButton key={link.title} link={link} />
           ))}
         </div>
+
+        {/* Firma estratégica comercial */}
+        <footer className="pt-2 text-center text-xs font-semibold text-black/70">
+          Powered by{" "}
+          <a
+            href="https://tarjetaspersonalizadas.ve"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-black underline decoration-orange-400 decoration-2 underline-offset-2 transition-colors hover:text-orange-600"
+          >
+            tarjetaspersonalizadas.ve
+          </a>
+        </footer>
       </section>
     </main>
   )
