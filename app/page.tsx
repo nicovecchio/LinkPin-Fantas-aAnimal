@@ -58,14 +58,14 @@ export default function Page() {
           ))}
         </div>
 
-        {/* Firma estratégica comercial */}
-        <footer className="pt-2 text-center text-xs font-semibold text-black/70">
+        {/* Firma estratégica comercial renovada */}
+        <footer className="pt-2 text-center text-sm font-extrabold tracking-wide text-black/80">
           Powered by{" "}
           <a
             href="https://tarjetaspersonalizadas.ve"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-black underline decoration-orange-400 decoration-2 underline-offset-2 transition-colors hover:text-orange-600"
+            className="bg-gradient-to-r from-orange-500 via-amber-500 to-emerald-600 bg-clip-text font-black text-transparent transition-opacity hover:opacity-80"
           >
             tarjetaspersonalizadas.ve
           </a>
