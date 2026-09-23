@@ -1,6 +1,6 @@
 import type { ComponentType, SVGProps } from "react"
-import { MapPin } from "lucide-react"
-import { WhatsAppIcon, InstagramIcon } from "@/components/brand-icons"
+import { MapPin, Star } from "lucide-react"
+import { WhatsAppIcon, InstagramIcon, TikTokIcon } from "@/components/brand-icons"
 
 type IconType = ComponentType<SVGProps<SVGSVGElement>>
 
@@ -25,31 +25,61 @@ export type ProfileData = {
   links: MainLink[]
 }
 
-// ────────────────────────────────────────────────────────────────
-//  Edita libremente este objeto para personalizar tu página.
-// ────────────────────────────────────────────────────────────────
 export const profileData: ProfileData = {
   avatarUrl: "/profile.png",
-  name: "Zaituna Cafe",
-  bio: "Compartir contigo nos hace feliz",
+  name: "Fantasía Animal",
+  bio: "¡Aquí, tu mascota va primero!🐾",
   socialLinks: [
     {
-      label: "Instagram",
-      url: "https://instagram.com/zaitunacafe",
-      icon: InstagramIcon,
+      label: "Ubicación",
+      url: "https://www.google.com/maps/place/Fantas%C3%ADa+Animal+Pet+Shop+C.A/@10.4887355,-66.8549322,19z/data=!4m6!3m5!1s0x8c2a5976e122e0e9:0x5d69c03f58d7a1ff!8m2!3d10.4887627!4d-66.8543723!16s%2Fg%2F11n9g5vfbn?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
+      icon: MapPin,
+    },
+    {
+      label: "Reseñas",
+      url: "https://www.google.com/maps/place/Fantas%C3%ADa+Animal+Pet+Shop+C.A/@10.4887355,-66.8549322,19z/data=!4m6!3m5!1s0x8c2a5976e122e0e9:0x5d69c03f58d7a1ff!8m2!3d10.4887627!4d-66.8543723!16s%2Fg%2F11n9g5vfbn?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
+      icon: Star,
     },
     {
       label: "WhatsApp",
-      url: "https://api.whatsapp.com/send/?phone=584242753345&text&type=phone_number&app_absent=0",
+      url: "https://wa.me/584127258189",
       icon: WhatsAppIcon,
+    },
+    {
+      label: "Instagram",
+      url: "https://www.instagram.com/fantasiaanimal/?hl=en",
+      icon: InstagramIcon,
+    },
+    {
+      label: "TikTok",
+      url: "https://www.tiktok.com/@fantasiaanimal?_r=1&_t=ZS-99F2e7oD3HJ",
+      icon: TikTokIcon,
     },
   ],
   links: [
     {
-      title: "Visítanos",
-      subtitle: "Zaituna Café · Sambil Caracas",
-      url: "https://google.com/maps/place/Zaituna+Café+Sambil+Caracas/@10.4888557,-66.8539086,18.5z/data=!4m8!3m7!1s0x8c2a59a8552d2501:0x8fc704ab3a62205b!8m2!3d10.4886374!4d-66.8541086!9m1!1b1!16s%2Fg%2F11sdbfwg6q?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3D",
+      title: "Ubicación / Reseñas",
+      subtitle: "Pet Shop C.A. · Encuéntranos y déjanos tu opinión",
+      url: "https://www.google.com/maps/place/Fantas%C3%ADa+Animal+Pet+Shop+C.A/@10.4887355,-66.8549322,19z/data=!4m6!3m5!1s0x8c2a5976e122e0e9:0x5d69c03f58d7a1ff!8m2!3d10.4887627!4d-66.8543723!16s%2Fg%2F11n9g5vfbn?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D",
       icon: MapPin,
+    },
+    {
+      title: "WhatsApp",
+      subtitle: "Atención directa para tu mascota",
+      url: "https://wa.me/584127258189",
+      icon: WhatsAppIcon,
+    },
+    {
+      title: "Instagram",
+      subtitle: "@fantasiaanimal",
+      url: "https://www.instagram.com/fantasiaanimal/?hl=en",
+      icon: InstagramIcon,
+    },
+    {
+      title: "TikTok",
+      subtitle: "@fantasiaanimal",
+      url: "https://www.tiktok.com/@fantasiaanimal?_r=1&_t=ZS-99F2e7oD3HJ",
+      icon: TikTokIcon,
     },
   ],
 }
