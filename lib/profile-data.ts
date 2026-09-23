@@ -1,6 +1,6 @@
 import type { ComponentType, SVGProps } from "react"
-import { MapPin, Star } from "lucide-react"
-import { WhatsAppIcon, InstagramIcon, TikTokIcon } from "@/components/brand-icons"
+import { MapPin, Star, Video } from "lucide-react"
+import { WhatsAppIcon, InstagramIcon } from "@/components/brand-icons"
 
 type IconType = ComponentType<SVGProps<SVGSVGElement>>
 
@@ -53,7 +53,7 @@ export const profileData: ProfileData = {
     {
       label: "TikTok",
       url: "https://www.tiktok.com/@fantasiaanimal?_r=1&_t=ZS-99F2e7oD3HJ",
-      icon: TikTokIcon,
+      icon: Video,
     },
   ],
   links: [
@@ -79,7 +79,7 @@ export const profileData: ProfileData = {
       title: "TikTok",
       subtitle: "@fantasiaanimal",
       url: "https://www.tiktok.com/@fantasiaanimal?_r=1&_t=ZS-99F2e7oD3HJ",
-      icon: TikTokIcon,
+      icon: Video,
     },
   ],
 }
