@@ -26,7 +26,7 @@ export type ProfileData = {
 }
 
 export const profileData: ProfileData = {
-  avatarUrl: "/profile.png",
+  avatarUrl: "..profile.png",
   name: "Fantasía Animal",
   bio: "¡Aquí, tu mascota va primero!🐾",
   socialLinks: [
